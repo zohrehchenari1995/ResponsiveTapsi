@@ -1,0 +1,68 @@
+/* Add font face */
+@import url('/css/font.css');
+
+/* Css Reset */
+*
+,*::before
+,*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Root variable */
+:root{
+  --color-navbar: #F8F8F8;
+  --color-primary: #FF5722;
+  --color-secondary-dark: #FFA589;
+  --color-secodary-light: #FFF6F2;
+  --color-heading: #000000;
+  --color-body: #333333;
+  --color-white: #FFFFFF;
+}
+/* Font size */
+html{
+  font-size: 62.5%;
+}
+
+/* body */
+body{
+  color: var(--color-body);
+  font-size: 1.4rem;
+}
+
+/* heading */
+h1
+,h2
+,h3{
+  color: var(--color-heading);
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2
+,h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+
+/* responsive fonr font-size */
+@media screen and (min-width:1024px){
+  body{
+    font-size: 1.8rem;
+  }
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 3.5rem;
+  }
+  h3{
+    font-size: 2.8rem;
+  }
+  
+}
