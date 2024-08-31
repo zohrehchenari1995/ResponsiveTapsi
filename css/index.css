@@ -1,7 +1,7 @@
 /* Add font face */
 @import url('/css/font.css');
 
-/* Css Reset */
+/* ------------------------Css Reset */
 *
 ,*::before
 ,*::after{
@@ -11,7 +11,7 @@
   list-style-type: none;
 }
 
-/* Root variable */
+/* ---------------------Root variable */
 :root{
   --color-navbar: #F8F8F8;
   --color-primary: #FF5722;
@@ -21,18 +21,19 @@
   --color-body: #333333;
   --color-white: #FFFFFF;
 }
-/* Font size */
+/* -------------------------Font size */
 html{
   font-size: 62.5%;
 }
 
-/* body */
+/* ------------------------------body */
 body{
   color: var(--color-body);
   font-size: 1.4rem;
 }
+/* end body--------------------------- */
 
-/* heading */
+/* ---------------------------heading */
 h1
 ,h2
 ,h3{
@@ -50,7 +51,7 @@ h2
 }
 
 
-/* responsive fonr font-size */
+/*responsive for font-size */
 @media screen and (min-width:1024px){
   body{
     font-size: 1.8rem;
@@ -64,5 +65,43 @@ h2
   h3{
     font-size: 2.8rem;
   }
-  
+}
+/* end heading--------------------- */
+
+
+/* -------------------------Button */
+.btn{
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  font-family: "Vazirmatn";
+  white-space: nowrap;
+  font-size: 1.4rem; 
+}
+.btn--primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn--secondary{
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
+}
+
+/* buttons in plan section */
+.btn-block{
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+/* responsive button */
+@media screen and (min-width:1024px){
+  .btn{
+    font-size: 1.6rem;
+  }
+  .btn-block{
+    font-size: 2rem;
+  }
 }
