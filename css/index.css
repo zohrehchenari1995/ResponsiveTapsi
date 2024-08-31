@@ -8,7 +8,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 
 /* ---------------------Root variable */
@@ -138,4 +138,22 @@ h2
     font-size: 1.4rem;
   }
 }
+/* end badge------------------------------- */
 
+/* -----------------------------------List */
+.list{
+  list-style: none;
+  font-size: 1.8rem;
+}
+ .list--tick .list__item{
+  background: url("/assets/images/Tick-Square.svg") no-repeat;
+  background-position: right center;
+  padding-right: 3rem;
+  margin-bottom: 1.5rem;
+ }
+ @media screen and (min-width:1024px) {
+    .list{
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+ }
