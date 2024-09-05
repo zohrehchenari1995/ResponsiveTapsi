@@ -1,7 +1,7 @@
 /* Add font face */
 @import url('/css/font.css');
 
-/* ------------------------Css Reset */
+/* -----------------------------------------Css Reset */
 *
 ,*::before
 ,*::after{
@@ -11,7 +11,7 @@
   /* list-style-type: none; */
 }
 
-/* ---------------------Root variable */
+/* --------------------------------------Root variable */
 :root{
   --color-navbar: #F8F8F8;
   --color-primary: #FF5722;
@@ -23,21 +23,24 @@
   --color-white: #FFFFFF;
   --color-badge-primary: #f06f38;
   --color-badge-secondary: #FFF6F2;
+  --color-icon: #ff8000;
+  --color-input: #F5F5F5;
+  --color-border-input: #E8E8E8;
 }
-/* -------------------------Font size */
+/* -------------------------------------------Font size */
 html{
   font-size: 62.5%;
 }
 
-/* ------------------------------body */
+/* -------------------------------------------------body */
 body{
   color: var(--color-body);
   font-size: 1.4rem;
   line-height: 1.7;
 }
-/* end body--------------------------- */
+/* end body--------------------------------------------- */
 
-/* ---------------------------heading */
+/* ---------------------------------------------heading */
 h1
 ,h2
 ,h3{
@@ -72,10 +75,10 @@ h2
     font-size: 2.8rem;
   }
 }
-/* end heading--------------------- */
+/* end heading---------------------------------------- */
 
 
-/* -------------------------Button */
+/* ---------------------------------------------Button */
 .btn{
   outline: 0;
   border: 0;
@@ -111,9 +114,9 @@ h2
     font-size: 2rem;
   }
 }
-/* end button------------------------- */
+/* end button---------------------------------------- */
 
-/* ------------------------------Badge */
+/* ---------------------------------------------Badge */
 .badge{
   display: inline-block;  
   outline: 0;
@@ -142,9 +145,9 @@ h2
     font-size: 1.4rem;
   }
 }
-/* end badge------------------------------- */
+/* end badge------------------------------------------- */
 
-/* -----------------------------------List */
+/* ------------------------------------------------List */
 .list{
   list-style: none;
   font-size: 1.8rem;
@@ -161,9 +164,9 @@ h2
       margin-bottom: 2rem;
     }
  }
- /* end list----------------------------- */
+ /* end list-------------------------------------------- */
 
- /* --------------------------------Plan */
+ /* ------------------------------------------------Plan */
  .block-plans{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,320px));
@@ -174,6 +177,7 @@ h2
 }
 .container{
   max-width: 1140px;
+  margin: 0 auto;
 }
 .plan{
   font-size: 1.8rem;
@@ -241,10 +245,10 @@ h2
     font-size: 1.8rem;
   }
  }
-/* end plan----------------------------------- */
+/* end plan------------------------------------------------ */
 
 
-/* ------------------------------------feature */
+/* -------------------------------------------------feature */
 .feature{
   display: grid;
   grid-template-columns: 280px;
@@ -263,10 +267,10 @@ h2
 .feature .btn{
   padding: 1rem 3rem;
 }
+/* responsive feature */
 @media screen and (min-width:1024px){
   .feature{
     grid-template-columns: repeat(2,1fr);
-    /* display: flex; */
     padding-right: 2rem;
     column-gap: 2rem;
   }
@@ -280,5 +284,184 @@ h2
     font-size: 1.8rem;
   }
 }
+/* end feature--------------------------------------------------*/
 
 
+/* --------------------------------------------------contact us */
+.contact-us{
+  display: grid;
+  grid-template-areas: 
+  "title"
+  "icon"
+  "information"
+  "form";
+}
+/* title contact us*/
+.contact-us__title{
+  grid-area: title;
+  text-align: center;
+}
+.contact-us__title h2{
+  font-size: 2.5rem;
+}
+.contact-us__title h4{
+  font-size: 2rem;
+}
+/* social media */
+.contact-us__social{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 40px;
+  color: var(--color-icon);
+  cursor: pointer;
+  margin: 30px 0  90px 0;
+}
+/* map */
+.contact-us__map{
+  display: none;
+}
+.contact-us__map img{
+  width: 100%;
+  height: 400px;
+}
+/* icon*/
+.contact-us__icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 40px;
+  padding-left:  2rem;
+  color:var(--color-icon);
+  cursor: pointer;
+  height: 140px;
+  margin-bottom: 2rem;
+}
+.contact-us__icon i span{
+  color: var(--color-heading);
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+/* form */
+
+.contact-us__form{
+  background-color: var(--color-white);
+  box-shadow: 0px 13px 19px 0 rgb(178, 170, 170);
+  border: 1px solid #DDDDDD;
+  border-radius: 15px;
+  font-family: "Vazirmatn";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px  2rem  2rem  2rem;
+  height: 100%;
+}
+.contact-us__form .contact__title{
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  
+}
+.form-control{
+  margin-bottom: 22px;
+}
+.contact-us__form input{
+  outline: 0;
+  border: 2px solid var(--color-border-input);
+  border-radius: 39px;
+  padding: 10px 29px;
+  background-color: var(--color-input);
+  color: var(--color-body);
+  font-family: "Vazirmatn";
+}
+.contact-us__form textarea{
+  width: 220px;
+  resize: none;
+  border: 2px solid var(--color-border-input);
+  background-color: var(--color-input);
+  outline: 0;
+  color: var(--color-body);
+  padding: 1rem;
+}
+::placeholder{
+  font-family: "Vazirmatn";
+  font-size: 1.2rem;
+  color: var(--color-body);
+}
+.contact-us__form input:focus
+,.contact-us__form textarea:focus{
+  border: 1px solid var(--color-primary);
+}
+
+/* button */
+.contact-us__form .btn-submit{
+  outline: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 35px;
+  color: var(--color-white);
+  padding: 1rem 76px;
+  background-color: var(--color-primary);
+  font-family: "Vazirmatn";
+  cursor: pointer;
+}
+
+/* responsive contact-us */
+@media screen and (min-width:1024px){
+  .contact-us{
+    grid-template-columns: 70fr 30fr;
+    grid-template-areas: 
+    "title  title"
+    "information  form"
+    "map          form"
+    "icon         form";
+  }
+  .contact-us__social{
+    grid-area: icon;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .contact-us__social i{
+    margin-left: 2rem;
+  }
+
+  /* icon */
+  .contact-us__icon{
+    grid-area: information;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding-top: 8rem;
+  }
+
+  /* map */
+  .contact-us__map{
+    display: block;
+    grid-area: map;
+  }
+  /* form */
+  .contact-us__form{
+    grid-area: form;
+    margin-right: 50px;
+    height: 600px;
+    margin-top: 50px;
+    /* border-radius: 20px; */
+  }
+  .contact-us__form .contact__title{
+    margin-bottom: 8rem;
+  }
+  .contact-us__form .contact-us__title{
+    font-size: 2.8rem;
+    margin-top: 0;
+  }
+  /* title */
+  .contact-us__title h2{
+    font-size: 3.5rem;
+  }
+  .contact-us__title h4{
+    font-size: 2.8rem;
+  }
+}

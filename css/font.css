@@ -63,6 +63,7 @@
 }
 
 /* Body */
-body{
+body
+,textarea{
   font-family: "Vazirmatn";
 }
